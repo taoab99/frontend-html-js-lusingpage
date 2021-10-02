@@ -52,56 +52,7 @@ const bannerArr = [
     },
 ];
 
-const productsApp = [
-    {
-        img: '../img/img-christmas-product-91-436x582_360x.png',
-        name: 'Women’s Joan Of Arctict Wedge',
-        price: 129,
-        sale: 32
-    },
-    {
-        img: '../img/img-christmas-product-9-436x582_360x.png',
-        name: 'Pleated Shirt Dress',
-        price: 114,
-        sale: 25
-    },
-    {
-        img: '../img/img-christmas-product-8-436x582_360x.png',
-        name: 'Black Fashion Handbag WM-032',
-        price: 239,
-        sale: 59
-    },
-    {
-        img: '../img/img-christmas-product-7-436x582_360x.png',
-        name: 'Grey Short Sleeved Shirt Club Nomade',
-        price: 299,
-        sale: 17
-    },
-    {
-        img: '../img/img-christmas-product-6-436x582_360x.png',
-        name: 'Tartan Wool Gloves Set',
-        price: 39,
-        sale: 10
-    },
-    {
-        img: '../img/img-christmas-product-hart-436x582_360x.jpg',
-        name: 'Lady White Co. Suede Cap – Rust',
-        price: 29,
-        sale: 0
-    },
-    {
-        img: '../img/img-christmas-product-93-436x582_95x95@2x.png',
-        name: 'Women’s Joan Of Arctict Wedge',
-        price: 129,
-        sale: 32
-    },
-    {
-        img: '../img/img-christmas-product-92-436x582_360x.png',
-        name: 'Black Fashion Handbag WM-39',
-        price: 137,
-        sale: 11
-    },
-]
+
 const ObjectPage = {
     l: 0,
     slideIndex: 1,
@@ -255,7 +206,7 @@ const ObjectPage = {
 
                     arr[index].soluong = 1;
 
-                    const api = 'http://localhost:3000/cart';
+                    const api = 'https://studiesapijsonserverlusingpage.herokuapp.com/cart';
                     const option = {
                         method: 'POST',
                         body: JSON.stringify(arr[index]),
@@ -348,7 +299,7 @@ const ObjectPage = {
         }
     },
     callAPI: function () {
-        var api = "http://localhost:3000/productsApp";
+        var api = "https://studiesapijsonserverlusingpage.herokuapp.com/productsApp";
         fetch(api)
             .then(function (response) {
                 return response.json()
@@ -358,7 +309,7 @@ const ObjectPage = {
             })
     },
     getcart: function () {
-        const api = 'http://localhost:3000/cart';
+        const api = 'https://studiesapijsonserverlusingpage.herokuapp.com/cart';
         fetch(api)
             .then((respons) => {
                 return respons.json();
